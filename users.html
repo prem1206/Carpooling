@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>users</title>
+    <style> 
+     .user{
+      display: flex;
+      background:#f4f4f4;
+      padding:10px;
+      margin-bottom:10px;
+    }
+
+    .user ul{
+      list-style: none;
+    }
+    </style>
+</head>
+<body>
+    <h1>Recurrent Users</h1>
+    <div id="user"></div>
+    <div>
+        
+    </div>
+    
+    <script>
+        window.onload = function loadText()
+        {
+            var xhr = new XMLHttpRequest();
+            xhr.open('GET','users.json',true);
+
+            xhr.onload = function(){
+                if(this.status == 200)
+                {
+                    var users = JSON.parse(this.responseText);
+                    var output = '';
+                    for(i in users){ 
+                    output += '<div class="user">' +
+              '<img src="'+users[i].img+'" width="70" height="70">' +
+              '<ul>' +
+              '<li>Name: '+users[i].name+'</li>' +
+              '<li>email: '+users[i].email+'</li>' +
+              '<li>'+users[i].say+'</li>' +
+              '</ul>' +
+              '</div>';
+                }
+                document.getElementById('user').innerHTML = output;
+                }
+            }
+            xhr.send();
+        }
+    </script>    
+</body>
+</html>

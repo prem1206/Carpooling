@@ -1,0 +1,20 @@
+[ 
+    {
+    "name" : "Hunain",
+    "email": "hunain.adhikari@somaiya.edu",
+    "img":"https://media.licdn.com/dms/image/C5103AQHkKEGausgzxw/profile-displayphoto-shrink_200_200/0?e=1562803200&v=beta&t=dNTUXRVGgmYoGnI1e8tYBXYzQY_KYoY2pvO1zV5Si3g",
+    "say":"This is an wonderful webite "
+    },
+    {
+        "name" : "Deep",
+        "email": "deep.chothani@somaiya.edu",
+        "img":"https://media.licdn.com/dms/image/C5103AQFymNjIBxoA3g/profile-displayphoto-shrink_200_200/0?e=1562803200&v=beta&t=JkoG_m1AsBp-DTg_gt4hZZYtS0Yrcf2q8YWiUbGscfI",
+        "say":"This is an wonderful webite "  
+    },
+    {
+        "name" : "Udit",
+        "email": "udit.dayani@somaiya.edu",
+        "img":"https://scontent-bom1-2.cdninstagram.com/vp/7375bff7254a82a6b48edc6de5899d16/5D54D099/t51.2885-19/s150x150/56990463_413259952590165_3536597112294735872_n.jpg?_nc_ht=scontent-bom1-2.cdninstagram.com",
+        "say":"This is an wonderful webite "
+        }
+]

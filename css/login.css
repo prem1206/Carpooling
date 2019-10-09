@@ -1,0 +1,129 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+
+.container input[type="text"],.container input[type="password"]{
+  
+       width: 85%;
+  background: transparent;
+  border-radius: 2px;    
+  border-bottom: 1px solid white;
+  color: rgba(8, 8, 8, 1);
+    height: 40px;
+    outline-color:rgba(7, 6, 6, 0.5);
+    font-size: 16px;
+    top:100px;
+    font-family: cursive;
+    font-weight: bold;
+    margin:20px;
+    
+}
+
+.container input[type="submit"] {
+            height: 30px;
+            color: #fff;
+            font-size: 15px;
+            background-color:rgba(35, 141, 240, 0.911);
+            cursor: pointer;
+            border-radius: 25px;
+            border: none;
+            outline: none;
+            margin-top: 15%;
+            margin-left: 60px;
+            width: 50%;
+            
+}
+
+.container {
+    position: fixed;
+    align-self: center;
+    justify-content: center;
+    top: 22.7%;
+    display: none;
+    background-color:rgba(245, 245, 245, 0.863);
+    padding: 40px, 20px;
+    height: 350px ;
+    width: 300px;
+    box-shadow: 10px rgb(86,128,233);
+    border-color: 1px solid black;
+    padding: 10px 10px 10px 10px;
+    z-index: 2;
+    left: 40%;
+    box-shadow: black;
+    border-radius: 5px;
+    border-top-right-radius: 0;
+    background-attachment: fixed;
+
+}
+.container h2{
+    text-align: center;
+    font-weight: bold;
+    color: black;
+    margin: 15%;
+    padding: 0 0 20px;
+}
+.container .close{
+    color:white;
+    background-color:transparent ;
+    width: 25px;
+    height: 25px;
+    left:100%;
+    top:0;
+    position: absolute;
+    border: none;
+    outline:none;
+    outline-color: black;
+
+}
+
+.close:hover{
+    background-color: rgb(20, 81, 247);
+
+    border-radius: 1px;
+}
+.container p
+        {
+            margin: 1%;
+            padding:1%;
+            font-weight: bold;
+            color: midnightblue;
+            font-size: 18px;
+            
+        }
+.container input
+        {
+            width: 100%;
+            margin-bottom: 20px;
+        }
+input[type="checkbox"] {
+            width: 20%;
+           
+        }
+::placeholder{
+    font-size: 14px;
+    color: black;
+    font-family: cursive;
+    font-weight: 100;
+}
+.container .login-head{
+    width: 90%;
+    float: left;
+    color: rgb(20, 81, 247);
+    padding: 5px;
+    text-align: center;
+    height: 45px;
+    font-size: 24px;
+    font-weight:bolder;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    cursor: pointer;
+    background-attachment: fixed;
+    scroll-behavior: unset;
+    overflow: hidden;
+    
+}
+.sticky {
+    position: fixed;
+    top: 50px;
+    width: 100%;
+  }
