@@ -35,7 +35,7 @@ nav{
     background-color: black;
     align-content: center;
 }
-nav a{
+ a{
     width: 20px;
     height: 100%;
     color: white;
@@ -47,7 +47,8 @@ nav a{
     padding: 10px;
     
 }
-a.auth{
+
+.auth,.auth1{
     background-color: rgba(0, 130, 252, 0.808);
     left: 220px;
     margin-right: 20px;
@@ -55,8 +56,17 @@ a.auth{
 
 }
 a:hover{
-    background-color: grey;
+    background-color: rgb(247, 117, 117);
 }
+.auth:hover,.auth1:hover{
+    background-color: rgb(4, 71, 255);
+
+}
+.auth1{
+    font-family: cursive;
+    font-size: 16px;
+}
+
 
 /*input[type="date"]::-webkit-calendar-picker-indicator*/
 input[type="date"]::-webkit-inner-spin-button {

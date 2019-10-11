@@ -2,12 +2,9 @@
 session_start();
 if(!isset($_SESSION["user"]))
 {
-    header("Location: http://localhost/quickride/Home.html");
+    header("Location: http://localhost/quickride/Home.php");
 }
-
 ?>
-
-
 
 <!doctype html>
 <html>
@@ -37,12 +34,8 @@ if(!isset($_SESSION["user"]))
             <a href="ride.html" target="_blank" title="Give rides">Offer Ride</a>
             <a href="contact.html " title="see contacts"> Contact</a>
             <a href="http://localhost/html2/users.html" target="_blank" title="Feedback">Reviews</a>
-            <a class="auth"><?php echo $_SESSION["user"] ?></a>
-            <a>
-                <form action="PHP/logout.php" method="post">
-                    <input type="submit" value="LOGOUT">
-                </form>
-            </a>
+            <a class="auth1"  ><?php echo $_SESSION["user"] ?></a>
+            <a class="auth1"   href="./PHP/logout.php">Logout</a>
     
         </nav>
         <h1 >Quick Ride</h1>

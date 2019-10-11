@@ -5,5 +5,5 @@ session_unset();
 
 // destroy the session
 session_destroy();
-header("Location: http://localhost/quickride/Home.html");
+header("Location: http://localhost/quickride/Home.php");
 ?>
