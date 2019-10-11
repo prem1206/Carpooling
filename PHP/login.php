@@ -3,7 +3,7 @@
 session_start();
 if(isset($_SESSION['user']))
 {   
-    header("Location: http://localhost/quickride/welcome.php");
+    header("Location: http://localhost/Carpooling/welcome.php");
 }
 
 $userid = $_POST["Userid"];
@@ -42,7 +42,7 @@ if($result->num_rows > 0)
             echo "INCORRECT Password";
         }
         else
-        {header("Location: http://localhost/quickride/welcome.php");
+        {header("Location: http://localhost/Carpooling/welcome.php");
         exit;}
     }
 else

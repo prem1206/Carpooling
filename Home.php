@@ -2,7 +2,7 @@
 session_start();
 if(isset($_SESSION['user']))
 {
-    header("Location: http://localhost/quickride/welcome.php");
+    header("Location: http://localhost/Carpooling/welcome.php");
 }
 ?>
 <html>
@@ -27,7 +27,7 @@ if(isset($_SESSION['user']))
 
         <nav>
                 <h5 class="title-of-site">Quick Ride</h5>
-            <a href="Home.html"  title="go to home page">Home </a>
+            <a href="Home.php"  title="go to home page">Home </a>
             <a href="ride.html" title="search for available rides"> Find Ride </a>
             <a href="ride.html" target="_blank" title="Give rides">Offer Ride</a>
             <a href="contact.html " title="see contacts"> Contact</a>
