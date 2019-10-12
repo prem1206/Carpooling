@@ -23,8 +23,8 @@ $getdata = "select username,password from customers
 $result = $con->query($getdata);
 if($result->num_rows > 0)
     {  $row = $result->fetch_assoc();
-        $getcode = "select * from encrypt
-            where encrypt.username = '$userid'";
+        $getcode = "select * from passkeys
+            where username = '$userid'";
         $coderesult = $con->query($getcode);
         if($coderesult->num_rows > 0)
         {
@@ -40,6 +40,9 @@ if($result->num_rows > 0)
         if($original_password!=$password )
         {
             echo "INCORRECT Password";
+            session_unset();
+            session_destroy();
+
         }
         else
         {header("Location: http://localhost/Carpooling/welcome.php");

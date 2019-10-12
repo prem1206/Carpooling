@@ -13,14 +13,14 @@
     <div class="container">
         <div class="heading">Sign Up </div>
         <div class="section">
-            <form id="myform" action="PHP/signup.php" method="POST" onsubmit="return check(this);">
+            <form id="myform" autocomplete="off" action="PHP/signup.php" method="POST" onsubmit="return check(this);">
                 <div class="row">
                     <div class="column1">Name</div>
                     <div class="column2" style="float: left">
-                        <input type="text" style="width: 150px" onblur="firstname()" placeholder="First Name" name="fname"autofocus >
+                        <input type="text" style="width: 150px"required onblur="firstname()" placeholder="First Name" name="fname"autofocus >
                     </div>
                     <div class="column2">
-                        <input type="text" style="width: 150px" onblur="lastname()" placeholder="Last Name" name="Lname">
+                        <input type="text" style="width: 150px" required onblur="lastname()" placeholder="Last Name" name="Lname">
                     </div>
                 </div>
                 <div class="row">
@@ -48,7 +48,7 @@
                             <option value="Hyderabad">Hyderabad</option>
                             <option value="Bangalore">Bangalore</option>
                         </datalist>
-                        <input type=text name="city" list="city" placeholder="City" required>
+                        <input type=text name="city" list="city" required placeholder="City" required>
                     </div>
                 </div>
 
@@ -56,13 +56,13 @@
                 <div class="row">
                     <div class="column1">Mobile</div>
                     <div class="column2" style="float: left">
-                        <input type="text" placeholder="XXXXXXX980" name="phoneno" maxlength="10">
+                        <input type="text" placeholder="XXXXXXX980" required name="phoneno" maxlength="10">
                     </div>
                 </div>
                 <div class="row">
                     <div class="column1">User ID</div>
                     <div class="column2" style="float: left">
-                        <input type="text" placeholder="UserName" name="Uid">
+                        <input type="text" placeholder="UserName" required name="Uid">
                     </div>
                 </div>
                 <div class="row">
@@ -79,13 +79,30 @@
                 </div>
                 <br><br>
                 <div class="row">
-                        <input type="submit" id="sub"value="SUBMIT" >
+                        <input type="submit" id="sub"value="SUBMIT" onsubmit="return check();" >
                 </div>
-                
-
             </form>
         </div>
     </div>
 </body>
+<script>
+function check()
+{
+    var x = document.getElementById('myform').elements["password"];
+    
+    var y = document.getElementById('myform').elements["cpassword"];
+    if(x.value === y.value)
+    {
+        return true;
+    }
+    else{
+        alert("Password do not match");
+        x.style.backgroundColor = "rgb(255,0,0,0.4)";
+        y.style.backgroundColor = "rgb(255,0,0,0.4)";
+        return false;
+
+    }
+}
+</script>
 
 </html>
