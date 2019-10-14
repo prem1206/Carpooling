@@ -121,6 +121,7 @@ input[type="checkbox"] {
     scroll-behavior: unset;
     overflow: hidden;
     
+    
 }
 .sticky {
     position: fixed;

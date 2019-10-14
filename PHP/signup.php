@@ -30,7 +30,7 @@ $storedata = "insert into customers values('$firstname','$lastname','$gender','$
 if ($con->query($storedata) === TRUE) {
     echo "Customer registered successfully";
     $con->query($sql);
-header("Location: http://localhost/Carpooling/welcome.php");
+    header("Location: http://localhost/Carpooling/welcome.php");
 exit;
 } else {
     echo "Error in registration: " . $con->error;

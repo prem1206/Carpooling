@@ -124,3 +124,11 @@ span{
     font-family: 'Acme';
     color: rgba(0, 0, 0, 0.5);
 }
+
+#keya1,#keya2,#keya3{
+    align-content: center;
+    color: rgba(255, 0, 0, 0.644);
+    font-family: 'Acme';
+    font-size: 14px;
+    text-align: center;
+}

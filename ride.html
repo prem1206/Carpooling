@@ -1,132 +1,135 @@
 <!doctype html>
 <html>
+
 <head>
-  <title>Car Pooling</title>
- </head>
-    <style>
-body{
-    margin: 0;
-    padding: 0;
-}
-body:before{
-            content: '';
-            position: fixed;
-            width: 100vw;
-            height: 100vh;
-            background-image: url("images/ride.png");
-            background-position: center center;
-            background-repeat: no-repeat;
-            background-attachment: fixed;
-            background-size: cover;
-            filter: blur(2px);
-    z-index: -1;
-           
-        }
-.container input
-        {
-            width: 100%;
-            margin-bottom: 20px;
-        }
-.container input[type="text"],.container input[type="date"],.container input[type="number"]{
-  
-       width: 100%;
-  background: transparent;
-  border: none;    
-  border-bottom: 1px solid white;
-  color: white;
-    height: 40px;
-    outline: none;
-    
-}
+    <title>Car Pooling</title>
+</head>
+<style>
+    body {
+        margin: 0;
+        padding: 0;
+    }
 
-input[type="submit"]{
-            height: 30px;
-            color: #fff;
-            font-size: 15px;
-            background: black;
-            cursor: pointer;
-            border-radius: 25px;
-            border: none;
-            outline: none;
-            margin-top: 5%;
-}
+    body:before {
+        content: '';
+        position: fixed;
+        width: 100vw;
+        height: 100vh;
+        background-image: url("images/ride.png");
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: cover;
+        filter: blur(2px);
+        z-index: -1;
 
-        
-        input::placeholder{
-            color:azure;
-            font-family: cursive;
-        }
-button {
-            height: 30px;
-            color: #fff;
-            font-size: 15px;
-            background: black;
-            width: 80px;
-    position: relative;
-    margin-left: 200px;
-    
-            border-radius: 25px;
-            border: none;
-            outline: none;
-            margin-top: 1%;
-    
-}
+    }
 
-        
-.container {
-    position: absolute;
-    outline: none;
-    top: 10%;
-    left: 35%;
-    background-color: rgb(0, 0, 0, 0.2);
-    padding: 80px, 40px;
-    height: 500px ;
-    width: 400px;
-    
-    border-color: transparent;
-}
+    .container input {
+        width: 100%;
+        margin-bottom: 20px;
+    }
 
-.container p
-        {
-            margin: 1%;
-            padding:1%;
-            font-weight: bolder;
-            color: white;
-            font-size: 22px;
-            font-family:cursive;
-            
-            
-        }
-.container input
-        {
-            width: 100%;
-            margin-bottom: 5px;
-        }
+    .container input[type="text"],
+    .container input[type="date"],
+    .container input[type="number"] {
+
+        width: 100%;
+        background: transparent;
+        border: none;
+        border-bottom: 1px solid white;
+        color: white;
+        height: 40px;
+        outline: none;
+
+    }
+
+    input[type="submit"] {
+        height: 30px;
+        color: #fff;
+        font-size: 15px;
+        background: black;
+        cursor: pointer;
+        border-radius: 25px;
+        border: none;
+        outline: none;
+        margin-top: 5%;
+    }
 
 
-  
-    </style>
+    input::placeholder {
+        color: azure;
+        font-family: cursive;
+    }
+
+    button {
+        height: 30px;
+        color: #fff;
+        font-size: 15px;
+        background: black;
+        width: 80px;
+        position: relative;
+        margin-left: 200px;
+
+        border-radius: 25px;
+        border: none;
+        outline: none;
+        margin-top: 1%;
+
+    }
+
+
+    .container {
+        position: absolute;
+        outline: none;
+        top: 10%;
+        left: 35%;
+        background-color: rgb(0, 0, 0, 0.2);
+        padding: 80px, 40px;
+        height: 500px;
+        width: 400px;
+
+        border-color: transparent;
+    }
+
+    .container p {
+        margin: 1%;
+        padding: 1%;
+        font-weight: bolder;
+        color: white;
+        font-size: 22px;
+        font-family: cursive;
+
+
+    }
+
+    .container input {
+        width: 100%;
+        margin-bottom: 5px;
+    }
+</style>
+
 <body>
-    
-    <button> Temp1    </button>
-    <button> Temp2    </button>
-    <button> Temp3    </button>
+
+    <button> Temp1 </button>
+    <button> Temp2 </button>
+    <button> Temp3 </button>
     <div class="container">
- <form style="margin-left: 15%;margin-right: 15%;">
-     <p>Source</p>
-     <input type="text" name="source" placeholder="Pickup....">
-     <p>Destination</p>
-    <input type="text" name="Destination" placeholder="Drop....">
-    <p>Date</p>
-     <input type="date" name="quantityS" placeholder="dd-mm-yyyy">
-     <p>No of Persons</p>
-     <input type="number" max="6" min="1" placeholder="No of people">
-     <br><br>
-      <input type="submit" name ="mode" value="Ride "> <br><br>
-      <input type="submit" name ="mode" value="Drive "> 
-     
-  
-</form>
+        <form style="margin-left: 15%;margin-right: 15%;">
+            <p>Source</p>
+            <input type="text" name="source" placeholder="Pickup....">
+            <p>Destination</p>
+            <input type="text" name="Destination" placeholder="Drop....">
+            <p>Date</p>
+            <input type="date" name="quantityS" placeholder="dd-mm-yyyy">
+            <p>No of Persons</p>
+            <input type="number" max="6" min="1" placeholder="No of people">
+            <br><br>
+            <input type="submit" name="mode" value="Ride "> <br><br>
+            <input type="submit" name="mode" value="Drive ">
+
+
+        </form>
 
     </div>
 </body>

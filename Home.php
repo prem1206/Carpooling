@@ -32,7 +32,7 @@ if(isset($_SESSION['user']))
             <a href="ride.html" target="_blank" title="Give rides">Offer Ride</a>
             <a href="contact.html " title="see contacts"> Contact</a>
             <a href="http://localhost/html2/users.html" target="_blank" title="Feedback">Reviews</a>
-            <a class="auth" onclick='login()'>Log in</a>
+            <a class="auth" onclick='login()' title="Login">Log in</a>
             <a class="auth" href="signup.html" title="Register">Sign up </a>
         </nav>
         <h1 >Quick Ride</h1>
