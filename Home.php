@@ -71,7 +71,7 @@ if(isset($_SESSION['user']))
         </div>
         <div>
             <br><br>
-            Go literally anywhere
+            Go literally anywhere!
         </div>
      
         </div>
