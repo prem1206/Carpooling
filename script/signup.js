@@ -1,91 +1,52 @@
+var cango = [-1, -1, -1];
+function check() {
+    var x = document.getElementById('myform').elements["password"];
 
-function check(form) {
-    
-    var x = document.getElementById("myform");
-
-    if (x.elements[0].value == '' || x.elements[0].value == null) {
-        alert("first name cannot be empty");
-        return false;
-    }
-
-    if (x.elements[1].value == '' || x.elements[1].value == null) {
-        alert("Last name cannot be empty");
-        return false;
-    }
-
-
-    if (document.forms.myform.Gender[0].checked == false && document.formsmyform.Gender[1].checked == false) {
-        alert("Please choose your Gender: Male or Female");
-        return false;
-    }
-   
-    var e = x.elements[3].value;
-    var reg = /\w+@(somaiya.edu|gmail.com)/;
-    if(!reg.test(e)) return false;
-    
-    if (!phone(x)) {
-        alert("Please add valid phone number");
-        return false;
-    }
-    if (!username(x)) {
-        alert("Please use only aphabets and numbers");
-        return false;
-    }
-    password(x);
-
-}
-
-function password(x) {
-    var p = x.elements[7].value;
-    var cp = x.elements[8].value;
-    var regp = /^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#\$%\^&\*])(?=.{8,})/;
-    if (p == '' || p == null) {
-        alert("fill the password input");
-        return false;
-    }
-    if (cp == '' || cp == null) {
-        alert("fill the confirm password input")
-        return false;
-    }
-
-    if (cp == p) {
-        if (!regp.test(p)) {
-            alert("Enter strong password with min 8 characters, a uppercase and lowercase.also use special symbol");
+    var y = document.getElementById('myform').elements["cpassword"];
+    if (x.value === y.value && !(x.value == null || x.value == '')) {
+        var t = cango.reduce((sum, num) => sum + num, 0);
+        if (t == 3)
+            return true;
+        else
             return false;
-        }
-
     }
-
     else {
-        alert("password doesnt match");
+        document.getElementById("key4").value = null;
+        document.getElementById("key5").value = null;
+        x.style.backgroundColor = "rgb(255,0,0,0.4)";
+        y.style.backgroundColor = "rgb(255,0,0,0.4)";
+        x.placeholder = "Password dont match or invalid";
+        y.placeholder = "Password dont match or invalid";
         return false;
-    }
-    var sub = document.getElementById('sub');
-    sub.addEventListener('onclick', print);
-    function print(e) {
-        e.preventDefault();
-        alert("Signed up successful");
-    }
 
+    }
 }
-function phone(x) {
-    var ph = x.elements[5].value;
-    var regno = /[0-9]{10}/;
-    if (ph == '' || ph == null) {
-        alert("fill the phone number input");
-        return false;
+function Avalability(val, flag) {
+    var xhr = new XMLHttpRequest();
+    var z = document.getElementById("key" + flag);
+    if (val != null && val != '') {
+        xhr.open('GET', "PHP/lookup.php?value=" + val + "&flag=" + flag, true);
+        xhr.onreadystatechange = function () {
+            if (this.readyState == 4 && this.status == 200) {
+                var result = this.responseText;
+                if (result == 0) {
+                    z.style.backgroundColor = "rgb(255,0,0,0.4)";
+
+                    document.getElementById("keya" + flag).innerText = "Already Registered";
+                    cango[flag - 1] = 0;
+                }
+            }
+        }
+        xhr.send();
     }
-    return regno.test(ph);
-
-}
-function username(x) {
-    var ph = x.elements[6].value;
-    var regno = /^[a-zA-Z]+(_)?\d+$/;
-    if (ph == '' || ph == null) {
-        alert("fill the userID");
-        return false;
+    else{ 
+        cango[flag - 1] = 0;
+        z.style.backgroundColor = "rgb(255,0,0,0.4)";
     }
-    return regno.test(ph);
 }
-
-
+function error(flag) {
+    document.getElementById("keya" + flag).innerText = "";
+    var z = document.getElementById("key" + flag);
+    z.style.backgroundColor = "rgba(184, 180, 180, 0.5)";
+    cango[flag - 1] = 1;
+}

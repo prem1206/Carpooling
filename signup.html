@@ -6,7 +6,7 @@
     <link rel="stylesheet" type="text/css" href="css/signup.css">
     <link href='https://fonts.googleapis.com/css?family=Aclonica' rel='stylesheet'>
     <link href='https://fonts.googleapis.com/css?family=Acme' rel='stylesheet'>
-    <script src="signup.js"></script>
+    <script src="script/signup.js"></script>
     <meta charset="UTF-8">
 </head>
 
@@ -18,10 +18,12 @@
                 <div class="row">
                     <div class="column1">Name</div>
                     <div class="column2" style="float: left">
-                        <input type="text" style="width: 150px"required onblur="firstname()" placeholder="First Name" name="fname"autofocus >
+                        <input type="text" style="width: 150px" required pattern="[A-Za-z]{2,15}"
+                            placeholder="First Name" name="fname" autofocus>
                     </div>
                     <div class="column2">
-                        <input type="text" style="width: 150px" required onblur="lastname()" placeholder="Last Name" name="Lname">
+                        <input type="text" style="width: 150px" required pattern="[A-Za-z{3,15}" placeholder="Last Name"
+                            name="Lname">
                     </div>
                 </div>
                 <div class="row">
@@ -34,7 +36,8 @@
                 <div class="row">
                     <div class="column1">Email</div>
                     <div class="column2" style="float: left">
-                        <input type="text" id="key1" onfocus="error(1);" onblur="Avalability(this.value,1)" placeholder="abc@gmail.com" name="email" required>
+                        <input type="email" id="key1" onfocus="error(1);" onblur="Avalability(this.value,1)"
+                            placeholder="abc@gmail.com" name="email">
                         <div id="keya1"></div>
                     </div>
                 </div>
@@ -50,7 +53,7 @@
                             <option value="Hyderabad">Hyderabad</option>
                             <option value="Bangalore">Bangalore</option>
                         </datalist>
-                        <input type=text name="city" list="city" required placeholder="City" required>
+                        <input type=text name="city" list="city" required placeholder="City">
                     </div>
                 </div>
 
@@ -58,89 +61,41 @@
                 <div class="row">
                     <div class="column1">Mobile</div>
                     <div class="column2" style="float: left">
-                        <input type="text" onfocus="error(2);" onblur="Avalability(this.value,2)" id="key2" placeholder="XXXXXXX980" required name="phoneno" maxlength="10">
+                        <input type="text" onfocus="error(2);" maxlength="10" onblur="Avalability(this.value,2)"
+                            id="key2" placeholder="XXXXXXX980" name="phoneno" pattern="[\d]{10}">
                         <div id="keya2"></div>
                     </div>
                 </div>
                 <div class="row">
                     <div class="column1">User ID</div>
                     <div class="column2" style="float: left">
-                        <input type="text"onfocus="error(3);" onblur="Avalability(this.value,3)" id="key3" placeholder="UserName" required name="Uid">
+                        <input type="text" onfocus="error(3);" onblur="Avalability(this.value,3)" id="key3"
+                            placeholder="UserName" name="Uid" pattern="[A-Za-z]\w+">
                         <div id="keya3"></div>
                     </div>
                 </div>
                 <div class="row">
                     <div class="column1">Password</div>
                     <div class="column2" style="float: left">
-                        <input type="password" id="key4" placeholder="Password" name="password">
+                        <input type="password" id="key4" title="minimum 5 digit,1 special char" placeholder="Password"
+                            name="password">
                     </div>
                 </div>
                 <div class="row">
                     <div class="column1">Confirm-password</div>
                     <div class="column2" style="float: left">
-                        <input type="password" id="key5" placeholder="Confirm-password" name="cpassword">
+                        <input type="password" id="key5" title="minimum 5 digit,1 special char"
+                            placeholder="Confirm-password" name="cpassword">
                     </div>
                 </div>
                 <br><br>
                 <div class="row">
-                        <input type="submit" id="sub"value="SUBMIT" onsubmit="return check();" >
+                    <input type="submit" id="sub" value="SUBMIT" onsubmit="return check();">
                 </div>
             </form>
         </div>
     </div>
 </body>
-<script>
- var cango = [1,1,1];   
-function check()
-{
-    var x = document.getElementById('myform').elements["password"];
-    
-    var y = document.getElementById('myform').elements["cpassword"];
-    if(x.value === y.value)
 
-    {   var t = cango.reduce((sum,num)=>sum+num,0);
-        if( t == 3)
-            return true;
-        else
-            return false;
-    }
-    else{
-        document.getElementById("key4").value = null;
-        document.getElementById("key5").value = null;
-        x.style.backgroundColor = "rgb(255,0,0,0.4)";
-        y.style.backgroundColor = "rgb(255,0,0,0.4)";
-        x.placeholder = "Password dont match";
-        y.placeholder = "Password dont match";
-        return false;
-
-    }
-}
-function Avalability(val,flag){
-    var xhr = new XMLHttpRequest();
-    var z = document.getElementById("key"+flag);
-    xhr.open('GET',"PHP/lookup.php?value="+val+"&flag="+flag,true);
-    xhr.onreadystatechange  = function(){
-        if (this.readyState == 4 && this.status == 200) {
-            var result = this.responseText;
-            if(result == 0)
-            {   z.style.backgroundColor = "rgb(255,0,0,0.4)";
-            
-                document.getElementById("keya"+flag).innerText = "Already Registered";
-                 cango[flag-1]=0;
-                return false;
-            }
-        }
-    }
-    xhr.send();
-    return true;
-    
-}
-function error(flag){
-    document.getElementById("keya"+flag).innerText = "";
-    var z = document.getElementById("key"+flag);
-    z.style.backgroundColor = "rgba(184, 180, 180, 0.5)";
-    cango[flag-1]=1;
-}
-</script>
 
 </html>
