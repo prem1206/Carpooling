@@ -73,14 +73,8 @@ if(isset($_SESSION['user']))
             <br><br>
             Go literally anywhere
         </div>
-       <!-- <footer>
-      <p >Posted by: Prem chandak</p>
-      <p>Contact information: <a href="mailto:someone@example.com">someone@example.com</a>
-        </p>
-    </footer>-->
+     
         </div>
 </body>
-
-
 
 </html>
