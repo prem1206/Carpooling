@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="span9">
+        <h1 class="title-lv1 border-bottom margin-bottom">
+            Your personal information
+        </h1>
+        <form name="profile_general" method="post" action="/dashboard/profile/general"
+            class="profile-form form-container profile-general-form form-horizontal padding no-margin-bottom"
+            novalidate="novalidate">
+            <fieldset>
+
+
+                <section class="civility-container">
+                    <div class="control-group">
+                        <div class=" control-label">
+                            Gender
+                        </div>
+                        <div class="controls gender-type">
+                            Male
+                        </div>
+                    </div>
+                    <div class="control-group "><label for="profile_general_firstname" class=" control-label">First
+                            name</label>
+                        <div class="controls"><input type="text" id="profile_general_firstname"
+                                name="profile_general[firstname]" required="required" value="Alex"></div>
+                    </div>
+                    <div class="control-group "><label for="profile_general_lastname" class=" control-label">Last
+                            name</label>
+                        <div class="controls"><input type="text" id="profile_general_lastname"
+                                name="profile_general[lastname]" required="required" value="jokat"></div>
+                    </div>
+                </section>
+
+                <section class="contact-container">
+                    <div class="control-group "><label for="profile_general_email" class=" control-label">Email</label>
+                        <div class="controls"><input type="email" id="profile_general_email"
+                                name="profile_general[email]" required="required" value="c7216983@urhen.com"></div>
+                    </div>
+
+                    <div class="control-group cellphone-row">
+                        <label for="profile_general_phone_rawInput" class="phone_raw_input control-label">Mobile
+                            phone</label>
+                        <div class="controls">
+                            <div class="form-row mobile-phone u-clearfix">
+                                <div class="column-01"><select id="profile_general_phone_regionCode"
+                                        name="profile_general[phone][regionCode]" required="required"
+                                        class="phone_country">
+                                       
+                                        <option title="+263" data-example="07X XXX XXXX" value="ZW">Zimbabwe (+263)
+                                        </option>
+                                    </select><span class="phone-code u-hide">+91</span></div>
+                                <div class="column-02"><input type="text" id="profile_general_phone_rawInput"
+                                        name="profile_general[phone][rawInput]" required="required"
+                                        class="phone_raw_input tip" data-trigger="focus" placeholder="08XXXX XXXXX"
+                                        data-hasqtip="1" oldtitle="Add your phone number" title=""></div>
+                            </div>
+
+                        </div>
+                    </div>
+                </section>
+
+                <section class="birthday-container">
+                    <div class="control-group "><label for="profile_general_birthDate" class=" control-label">Date of
+                            birth</label>
+                        <div class="controls"><input type="text" id="profile_general_birthDate"
+                                name="profile_general[birthDate]" required="required" value="01/11/1998"></div>
+                    </div>
+                </section>
+
+                <section class="biography-container">
+                    <div class="control-group">
+                        <label for="profile_general_biography" class=" control-label">Bio</label>
+                        <div class="controls">
+                            <div class="alert alert-info no-icon u-clearfix">
+                                <svg aria-hidden="true" class="c-icon u-left margin-half-right u-darkBlue-fill"
+                                    style="width: 24px; height: 24px;">
+                                    <use xlink:href="#icon-info"></use>
+                                </svg>
+
+                                <p class="u-overflowHidden no-margin-top">Tell other members about yourself and why they
+                                    should want to travel with you (min. 10 characters).</p>
+                            </div>
+                            <div id="checkCommentWarning"
+                                class="alert no-icon hide rules-warning no-margin-top u-clearfix">
+                                <svg aria-hidden="true" class="c-icon u-left margin-half-right u-orange-fill"
+                                    style="width: 24px; height: 24px;">
+                                    <use xlink:href="#icon-exclamation-circle"></use>
+                                </svg>
+
+                                <p class="u-overflowHidden">
+                                    Please don't add your phone number here.
+                                </p>
+                            </div>
+                            <div class="comments-container">
+                                <input type="hidden" id="checkCommentUrl" data-url="/content/check"
+                                    data-filter-msg="checkCommentWarning">
+                                <div class="apply-char-counter u-left u-inlineBlock" data-limit="500">
+                                    <textarea id="profile_general_biography" name="profile_general[biography]"
+                                        placeholder="Example: " i'm="" a="" student="" at="" delhi="" university,=""
+                                        and="" i="" often="" visit="" friends="" in="" jaipur.="" love="" photography=""
+                                        rock="" music.""="" data-gtm-event="has_fulfilled_bio" data-gtm-trigger="change"
+                                        maxlength="500"></textarea><span class="display-char-counter">500/500</span>
+                                </div>
+                                <div class="directives">
+                                    <p class="u-textBold">Please do not include:</p>
+                                    <ul>
+                                        <li>
+                                            <span>Phone number</span>
+                                        </li>
+                                        <li>
+                                            <span>Facebook account details</span>
+                                        </li>
+                                        <li>
+                                            <span>Details about specific rides</span>
+                                        </li>
+                                    </ul>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <div class="control-group">
+                    <div class="controls button-container">
+                        <button type="submit" class="btn-validation btn-large apply-btn-loader">Save</button>
+                    </div>
+                </div>
+            </fieldset>
+            <input type="hidden" id="profile_general__token" name="profile_general[_token]"
+                value="8VU_EBvEd9VZ43GBf6_A9IajnrfTP5KGONP1UzQFCXA">
+        </form>
+
+
+
+    </div>
+</body>
+
+</html>

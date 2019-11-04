@@ -1,5 +1,6 @@
 body{
     margin: 0;
+    overflow-x: hidden;
 } 
 
  .section{
@@ -20,13 +21,26 @@ body{
     
 }
 .section h1{
-font-family:'Gill Sans';
-font-size: 6rem;
-position: relative;
-align-content:center;
-justify-content: center;
-align-self: center;
+    font-size: 6rem;
+    position: relative;
+    
+    margin-left: 400px;
+    top: 150px;
+    background-color: rgba(174, 218, 243, 0.2);
+    width: 500px;
+    border-radius:12px ;
+    color: rgba(20, 233, 222, 0.638);
+    font-family: 'Lobster';
+    text-align: center;
 
+}
+.headbar{
+    width:900px;
+    float:left;
+    font-size:30px;
+    color:rgba(4, 150, 142, 0.838);
+    margin-top:-10px;
+    font-family: 'Lobster';
 }
 nav{
     padding: 15px  15px 0px 15px;
@@ -48,7 +62,15 @@ nav{
     
 }
 
-.auth,.auth1{
+.auth{
+    color:rgba(4, 150, 142);
+    font-size: 24px;
+    font-family: 'Lobster';
+}
+.auth:hover{
+    background-color:rgba(4, 150, 142, 0.2) ;
+}
+.auth1{
     background-color: rgba(0, 130, 252, 0.808);
     left: 220px;
     margin-right: 20px;
@@ -59,7 +81,7 @@ nav{
 a:hover{
     background-color: rgb(247, 117, 117);
 }
-.auth:hover,.auth1:hover{
+.auth1:hover{
     background-color: rgb(4, 71, 255);
 
 }
@@ -160,3 +182,49 @@ nav .title-of-site{
     z-index: 2;
     cursor: pointer;
   }
+
+.offerride{
+    background-color: white;
+    width: 100%;
+    height: 300px;
+    position: absolute;
+    display: inline-block;
+    padding: 50 0 50 0;
+    margin: 0 auto;
+    align-content: center;
+    text-align: center;
+}
+.offerride .offerride-img{
+    display: inline-block;
+    width: 400px;
+    vertical-align: top;
+    
+}
+.offerride .offerride-content{
+    display: inline-block;
+    width: 400px;
+    vertical-align: top;
+}
+.footer{
+    background-color: gray;
+    width: 100%;
+    height: 200px;
+    position: absolute;
+    display: inline-block;
+    padding: 50 0 50 0;
+    margin: 0 auto;
+    padding: 50 100 50 100;
+    top: 1050px;
+}
+.column {
+    float: left;
+    width: 50%;
+    padding: 10px;
+    box-sizing: border-box;
+  }
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+ 

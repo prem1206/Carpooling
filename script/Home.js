@@ -9,8 +9,8 @@ function logout() {
    
 }
 function onfocus1(ele) {
-    ele.style.color = "Blue";
+    ele.style.color = "black";
 }
 function onfocus2(ele) {
-    ele.style.color = "black";
+    ele.style.color = "#383838";
 }

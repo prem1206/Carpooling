@@ -34,11 +34,11 @@ if(!isset($_SESSION["user"]))
             <a href="ride.html" target="_blank" title="Give rides">Offer Ride</a>
             <a href="contact.html " title="see contacts"> Contact</a>
             <a href="http://localhost/html2/users.html" target="_blank" title="Feedback">Reviews</a>
-            <a class="auth1"  ><?php echo $_SESSION["user"] ?></a>
+            <a class="auth1" href="profile.php?user=<?php echo $_SESSION['user'] ?>" > <?php echo $_SESSION["user"] ?></a>
             <a class="auth1"   href="./PHP/logout.php">Logout</a>
     
         </nav>
-        <h1 >Quick Ride</h1>
+        <h1 style="color:transparent;background-color:transparent">Quick Ride</h1>
         <div id="log" class="container">
                 <button class="close" onclick="logout()">X</button>
             <form id="myheader" action="PHP/login.php" method="POST">
@@ -60,28 +60,36 @@ if(!isset($_SESSION["user"]))
    
     </div>
       
-<div class="offerride">
-        <img src="home_driver.jpg" width="400px" height="300px" style="float: left;margin-right:50px ">
-        <br><br><br>
-        <h2><b>Driving in your car soon?</b></h2>
-        Lets make this your least expensive journey ever<br><br>
-        <br><a href="ride.html" style="background-color: transparent;" ><button>Offer Ride</button></a>
-        
+    <div class="offerride">
+        <div class="offerride-img">
+            <img src="images/home_driver.jpg" width="400px" height="300px">
+        </div>
+        <div class="offerride-content">
+            <h2 style="color: rgb(5, 71, 82);font-size: 30px;font-weight: 700;line-height: 1.06;">
+                Driving in your car soon?</h2>
+            <h3 style="color: rgb(112, 140, 145);font-size: 16px; line-height: 20px;">
+                Lets make this your least expensive journey ever</h3><br>
+            <a href="ride.html" style="background-color: rgb(0, 175, 245);  color: rgb(255, 255, 255);">Offer Ride</a>
+        </div>
     </div>
-        <div class="where">
-            <h2>Where do you want to go?</h2>
-            
-        </div>
-        <div>
-            <br><br>
-            Go literally anywhere
-        </div>
-       <!-- <footer>
-      <p >Posted by: Prem chandak</p>
-      <p>Contact information: <a href="mailto:someone@example.com">someone@example.com</a>
-        </p>
-    </footer>-->
-        </div>
+
+    
+    <footer class="footer">
+        <div class="row">
+            <div class="column" >
+            <p>Posted by: SomeExample Enterprose Ltd</p>
+      <p>Contact information: <a href="mailto:someone@example.com">some@example.com</a>.</p>
+      <p>Terms and Conditions</p>
+             </div>
+            <div class="column">
+                  
+                <p>Contacts</p>
+                 <p>About us</p>
+                <p>Frequently asked question</p>
+            </div>
+        </div>  
+     
+    </footer>
 </body>
 
 
