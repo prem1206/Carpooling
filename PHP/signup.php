@@ -22,7 +22,7 @@ if (in_array($cipher, openssl_get_cipher_methods()))
     $iv = openssl_random_pseudo_bytes($ivlen);
     $ciphertext = openssl_encrypt($password, $cipher, null, $options=0, $iv, $tag);
     $original_plaintext = openssl_decrypt($ciphertext, $cipher, null, $options=0, $iv, $tag);
-    $sql = "insert into passkeys values('$user','$cipher','$iv','$tag')";
+    $sql = "insert into passkeys(username,cipher,iv,tag) values('$user','$cipher','$iv','$tag')";
     
 }
 $storedata = "insert into customers values('$firstname','$lastname','$gender','$email','$city','$mobile','$user','$ciphertext')";
@@ -30,7 +30,7 @@ $storedata = "insert into customers values('$firstname','$lastname','$gender','$
 if ($con->query($storedata) === TRUE) {
     echo "Customer registered successfully";
     $con->query($sql);
-    header("Location: http://localhost/Carpooling/welcome.php");
+    header("Location: http://localhost/Carpooling/welcome.php?event=signedup");
 exit;
 } else {
     echo "Error in registration: " . $con->error;

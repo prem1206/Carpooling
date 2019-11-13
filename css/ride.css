@@ -1,0 +1,113 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+body:before {
+    content: '';
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    background-image: url("../images/ride.png");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    filter: blur(18px);
+    z-index: -1;
+    
+
+}
+
+.container input {
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.container input[type="text"],
+.container input[type="date"],
+.container input[type="number"] {
+    margin-left:5px ;
+    width: 100%;
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid white;
+    color: rgb(248, 165, 165);
+    height: 40px;
+    outline: none;
+    font-size: 16px;
+    font-weight: 700;
+    font-family: monospace;
+
+}
+
+input[type="submit"] {
+    height: 30px;
+    color: rgb(240, 114, 114);
+    font-size: 15px;
+    background: black;
+    cursor: pointer;
+    border-radius: 25px;
+    border: none;
+    outline: none;
+    margin-top: 5%;
+}
+
+
+input::placeholder {
+    color: azure;
+    font-family: cursive;
+    color:rgba(255, 255, 255, 0.658);
+    font-size: 12px;
+    font-weight: 300;
+    margin-left:5px ;
+
+}
+
+button {
+    height: 30px;
+    color: #fff;
+    font-size: 15px;
+    background: black;
+    width: 80px;
+    position: relative;
+    margin-left: 200px;
+
+    border-radius: 25px;
+    border: none;
+    outline: none;
+    margin-top: 1%;
+
+}
+
+
+.container {
+    position: absolute;
+    outline: none;
+    top: 15%;
+    left: 35%;
+    background-color: rgb(0, 0, 0, 0.5);
+    padding: 80px, 40px;
+    height: 525px;
+    width: 400px;
+    border-radius:8px;
+    padding: 20 0 0 0;
+    border-color: transparent;
+}
+
+.container p {
+    margin: 1%;
+    padding: 1%;
+    font-weight: bolder;
+    color: aqua;
+    font-size: 22px;
+    font-family: serif;
+    margin-left:0 ;
+
+
+}
+
+.container input {
+    width: 100%;
+    margin-bottom: 5px;
+}

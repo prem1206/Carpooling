@@ -39,13 +39,13 @@ if($result->num_rows > 0)
         
         if($original_password!=$password )
         {
-            echo "INCORRECT Password";
+            header("Location: http://localhost/Carpooling/home.php");
             session_unset();
             session_destroy();
 
         }
         else
-        {header("Location: http://localhost/Carpooling/welcome.php");
+        {header("Location: http://localhost/Carpooling/welcome.php?event=loggedin");
         exit;}
     }
 else

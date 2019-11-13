@@ -44,12 +44,7 @@ if(isset($_SESSION['user']))
             </form>
         </div>
 
-        <div class="shortcut">
-            <input type="text" onfocus="onfocus1(this)" onblur="onfocus2(this)" placeholder="Leaving from....">
-            <input type="text" onfocus="onfocus1(this)" onblur="onfocus2(this)" placeholder="Going to.... ">
-            <input type="date" onfocus="onfocus1(this)" onblur="onfocus2(this)" placeholder="Travel Date">
-            <input type="submit" onclick="onfocus(this)" placeholder="Find Ride ">
-        </div>
+        
 
     </div>
 
@@ -57,16 +52,13 @@ if(isset($_SESSION['user']))
         <div class="offerride-img">
             <img src="images/home_driver.jpg" width="400px" height="300px">
         </div>
-<<<<<<< HEAD
+
         <div class="offerride-content">
             <h2 style="color: rgb(5, 71, 82);font-size: 30px;font-weight: 700;line-height: 1.06;">
                 Driving in your car soon?</h2>
             <h3 style="color: rgb(112, 140, 145);font-size: 16px; line-height: 20px;">
                 Lets make this your least expensive journey ever</h3><br>
-            <a href="ride.html" style="background-color: rgb(0, 175, 245);  color: rgb(255, 255, 255);">Offer Ride</a>
-=======
-     
->>>>>>> fc6b2963c3d1f78031ab73ad192a009a4f560969
+            <a href="ride.php" style="background-color: rgb(0, 175, 245);  color: rgb(255, 255, 255);">Offer Ride</a>
         </div>
     </div>
 

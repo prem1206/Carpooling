@@ -128,3 +128,28 @@ input[type="checkbox"] {
     top: 50px;
     width: 100%;
   }
+
+  .welcome-container {
+    position: fixed;
+    align-self: center;
+    justify-content: center;
+    top: 22.7%;
+    display: none;
+    background-color:rgba(135, 240, 234, 0.38);
+    padding: 40px, 20px;
+    height: 100px ;
+    width: 400px;
+    z-index: 2;
+    left: 35%;
+    border-radius: 5px;
+    font-size:36px;
+    color:rgba(5, 15, 14, 0.838);
+    margin-top:-10px;
+    font-family: 'Lobster';
+    text-align: center;
+    border-radius: 5px;
+    border-top-right-radius: 0;
+    background-attachment: fixed;
+    padding: 20px;
+
+}
