@@ -2,7 +2,7 @@
 session_start();
 if(!isset($_SESSION["user"]))
 {
-    header("Location: http://localhost/Carpooling/Home.php");
+    header("Location: http://localhost/Carpooling/index.php");
 }
 $temp = $_SESSION["user"];
 $mobile = $_POST["phoneno"];

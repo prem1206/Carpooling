@@ -39,7 +39,7 @@ if($result->num_rows > 0)
         
         if($original_password!=$password )
         {
-            header("Location: http://localhost/Carpooling/home.php");
+            header("Location: http://localhost/Carpooling/index.php");
             session_unset();
             session_destroy();
 
