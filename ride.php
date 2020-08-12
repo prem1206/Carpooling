@@ -33,13 +33,13 @@ if(!isset($_SESSION["user"]))
     <div class="container">
         <form style="margin-left: 10%;margin-right: 10%;" method="post" action="PHP/booking.php">
             <p>Source</p>
-            <input type="text" name="source" placeholder="Pickup....">
+            <input type="text"  name="source" required placeholder="Pickup....">
             <p>Destination</p>
-            <input type="text" name="Destination" placeholder="Drop....">
+            <input type="text" name="Destination"required placeholder="Drop....">
             <p>Date</p>
-            <input type="date" name="date" placeholder="dd-mm-yyyy">
+            <input required type="date" name="date" placeholder="dd-mm-yyyy">
             <p>No of Persons</p>
-            <input type="number" max="6" min="1" name="quantity" placeholder="No of people">
+            <input type="number"required max="6" min="1" name="quantity" placeholder="No of people">
             <br><br>
             <input type="submit" name="mode" value="Ride "> <br><br>
             <input type="submit" name="mode" value="Drive ">

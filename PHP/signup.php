@@ -16,6 +16,15 @@ if ($con->connect_error) {
     session_unset();
     session_destroy();
 }
+$createtable = "CREATE TABLE passkeys (
+    id INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+    username varchar(15) NOT NULL,
+    cipher VARCHAR(30) NOT NULL,
+    iv VARCHAR(30) NOT NULL,
+    tag varchar(10)
+    )";
+ 
+ $con->query($createtable);
 if (in_array($cipher, openssl_get_cipher_methods()))
 {
     $ivlen = openssl_cipher_iv_length($cipher);
@@ -25,7 +34,20 @@ if (in_array($cipher, openssl_get_cipher_methods()))
     $sql = "insert into passkeys(username,cipher,iv,tag) values('$user','$cipher','$iv','$tag')";
     
 }
-$storedata = "insert into customers values('$firstname','$lastname','$gender','$email','$city','$mobile','$user','$ciphertext')";
+$createtb = "CREATE TABLE customers (
+    id INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+    firstname varchar(15) NOT NULL,
+    lastname varchar(15) NOT NULL,
+    gender VARCHAR(6) NOT NULL,
+    email varchar(30) NOT NULL,
+    city varchar(15) NOT NULL,
+    mobile varchar(10) NOT NULL, 
+    username varchar(15) NOT NULL,
+    password varchar(60) NOT NULL
+    )";
+ 
+$con->query($createtb);
+$storedata = "insert into customers (firstname,lastname,gender,email,city,mobile,username,password) values('$firstname','$lastname','$gender','$email','$city','$mobile','$user','$ciphertext')";
 
 if ($con->query($storedata) === TRUE) {
     echo "Customer registered successfully";

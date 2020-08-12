@@ -9,7 +9,7 @@ else{
     $destination = $_POST["Destination"];
     $date = $_POST["date"];
     $passenger = $_POST["quantity"];
-    
+    if(isset($source)&&isset($date)&&isset($destination)&&isset($passenger)){ 
     #$api = file_get_contents("https://maps.googleapis.com/maps/api/distancematrix/json?units=imperial&origins=".$source."&destinations=".$destination."&key=");
     $con = new mysqli("localhost","root","","quickride");
     $user = $_SESSION["user"];
@@ -22,7 +22,7 @@ else{
         passenger int
         )";
      
-    // $con->query($createtable);    Uncomment it when running first time
+     $con->query($createtable); //   Uncomment it when running first time
          
         $sql = "INSERT into Bookings(username,source,destination,ridedate,passenger)
          VALUES('$user','$source','$destination','$date','$passenger')";
@@ -32,6 +32,9 @@ else{
             echo "Error creating table: " . $con->error;
         }
         header("Location: http://localhost/Carpooling/welcome.php?event=Booked");
+     }
+     else
+     echo "dont leave field empty";
         $con->close();
 }
 

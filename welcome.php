@@ -61,10 +61,10 @@ if($_GET["event"]==="loggedin"){ ?>
         </nav>
         <h1 style="color:transparent;background-color:transparent">Quick Ride</h1>
         <form class="shortcut" action="PHP/booking.php" method="post">
-            <input type="text" name="source" onfocus="onfocus1(this)" onblur="onfocus2(this)" placeholder="Leaving from....">
-            <input type="text" name="Destination" onfocus="onfocus1(this)" onblur="onfocus2(this)" placeholder="Going to.... ">
-            <input type="date" name="date" onfocus="onfocus1(this)" onblur="onfocus2(this)" placeholder="Travel Date">
-            <input type="number" max="6" name="quantity" min="1" onfocus="onfocus1(this)" onblur="onfocus2(this)" placeholder="Passenger ">
+            <input type="text" required name="source" onfocus="onfocus1(this)" onblur="onfocus2(this)" placeholder="Leaving from....">
+            <input type="text" required name="Destination" onfocus="onfocus1(this)" onblur="onfocus2(this)" placeholder="Going to.... ">
+            <input type="date" required name="date" onfocus="onfocus1(this)" onblur="onfocus2(this)" placeholder="Travel Date">
+            <input type="number" required max="6" name="quantity" min="1" onfocus="onfocus1(this)" onblur="onfocus2(this)" placeholder="Passenger ">
             <input type="submit" name="mode" value="Ride ">
         </form>
    
